@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserva de Sala — Faculdade de Odontologia UFG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://calendar.google.com">
+<link rel="dns-prefetch" href="https://calendar.google.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="topo-interno">
+    <div class="marca">
+      <div class="logo-slot">
+        
+       <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Marca_da_UFG.png?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original" alt="UFG">
+      </div>
+      <div class="divisor-logo"></div>
+      <div class="logo-slot">
+       
+        <img src="Logos/Captura de tela 2026-10-09 155529.png" alt="Faculdade de Odontologia UFG">
+      </div>
+      <div class="titulo-area">
+        <h1>Reserva de Sala</h1>
+        <p class="sub">Faculdade de Odontologia — Universidade Federal de Goiás</p>
+      </div>
+    </div>
+    <div class="relogio">
+      Goiânia
+      <strong id="agora">—</strong>
+    </div>
+  </div>
+  <div class="faixa-detalhe"></div>
+</header>
+
+<div class="corpo">
+  <button class="abre-menu" id="abreMenu" aria-expanded="false" aria-controls="menu">
+    <span>Escolher espaço</span><span aria-hidden="true">▾</span>
+  </button>
+
+  <nav id="menu" aria-label="Espaços da faculdade" data-aberto="true"></nav>
+
+  <main>
+    <div class="cabecalho-sala">
+      <div>
+        <p class="etiqueta" id="categoriaAtual">Ambulatórios</p>
+        <h3 id="salaAtual">Ambulatório I</h3>
+      </div>
+      <div class="controles">
+        <button class="botao" data-modo="WEEK" aria-pressed="true">Semana</button>
+        <button class="botao" data-modo="MONTH" aria-pressed="false">Mês</button>
+        <button class="botao" data-modo="AGENDA" aria-pressed="false">Lista</button>
+        <a class="botao" id="abrirGoogle" href="#" target="_blank" rel="noopener">Abrir no Google Agenda</a>
+      </div>
+    </div>
+
+    <div class="quadro">
+      <iframe id="agenda" title="Agenda do espaço selecionado"></iframe>
+      <div class="carregando" id="carregando">Carregando agenda…</div>
+    </div>
+
+    <p class="rodape">
+      Horários preenchidos indicam o espaço <span>já reservado</span>. Fuso de Brasília (America/São_Paulo).
+    </p>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
